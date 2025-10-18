@@ -272,11 +272,6 @@ CoinCollected.OnClientEvent:Connect(function(_, current, max)
         resetting = true
         bag_full = true
         local hrp = getHRP()
-        if start_position then
-            local tween = TweenService:Create(hrp, TweenInfo.new(2, Enum.EasingStyle.Linear), {CFrame = start_position})
-            tween:Play()
-            tween.Completed:Wait()
-        end
         task.wait(0.5)
         player.Character.Humanoid.Health = 0
         player.CharacterAdded:Wait()
