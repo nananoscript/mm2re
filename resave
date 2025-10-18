@@ -312,7 +312,7 @@ task.spawn(function()
             local coin, dist = get_nearest_coin()
             if coin then
                 local hrp = getHRP()
-                if dist > 150 then
+                if dist > 200 then
                     hrp.CFrame = coin.CFrame
                 else
                     local tween = TweenService:Create(hrp, TweenInfo.new(dist / 20, Enum.EasingStyle.Linear), {CFrame = coin.CFrame})
@@ -322,6 +322,6 @@ task.spawn(function()
                 end
             end
         end
-        task.wait(0.1)
+        task.wait()
     end
 end)
